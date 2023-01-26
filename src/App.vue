@@ -6,6 +6,6 @@ import Scheduler from './components/Scheduler.vue'
 
 <template>
   <div class="container-fluid">
-    <Scheduler />
+    <SchedulerStatic />
     </div>
 </template>
