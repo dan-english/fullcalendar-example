@@ -1,0 +1,64 @@
+@import './base.css';
+.box {
+
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:15px;
+    background-color:white;
+}
+
+.heading {
+    padding-bottom:50px;
+    text-align:center;
+}
+
+
+
+
+
+    .fc-daygrid-day-number {
+        font-size:25px;
+        flex-direction: column;
+    }
+
+    .fc-day-disabled{
+        background-color:white!important;
+        border:0px!important;
+    }
+
+
+.fc-daygrid-day-frame .fc-daygrid-day-top {
+    flex-direction: column!important;
+    text-align:center!important;
+    width:50px!important;
+    height: auto!important;
+    margin: 0 auto!important;
+}
+.fc-daygrid-day-number {
+    margin-top:20px;
+
+}
+/** circle around day**/
+.available-timeslots-on-day .fc-daygrid-day-frame .fc-daygrid-day-top {
+    flex-direction: column!important;
+    text-align:center!important;
+    width:50px!important;
+    height: auto!important;
+    margin: 0 auto!important;
+}
+.available-timeslots-on-day .fc-daygrid-day-frame .fc-daygrid-day-top .fc-daygrid-day-number {
+    color:#0068d3!important;
+    background-color:#abd4ff!important;
+    border:1px solid #0068d3;
+    border-radius:30px;
+    width:50px;
+    text-align:center!important;
+}
+.active_timeslot_button {
+    background-color:red!important;
+    color:white!important;
+}
+
+.active_timeslot_button:focus {
+    outline-color: lightblue;
+}
