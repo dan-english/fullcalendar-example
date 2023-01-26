@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_cors import CORS, cross_origin
 
 import json
@@ -7,7 +7,7 @@ import time
 import os
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder = "./dist/assets",  template_folder = "./dist")
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
@@ -25,7 +25,7 @@ user_token = os.environ.get('ACCESS_TOKEN')
 
 @app.route("/")
 def main():
-    return "<p>main</p>"
+    return render_template("index.html")
 
 
 @app.route("/availability")
