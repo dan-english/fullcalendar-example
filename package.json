@@ -4,8 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "old_build": "vite build",
+    "preview": "vite preview",
+    "prestart": "npm run build",
+    "build": "npx vite build",
+  "start": "node index.js"
   },
   "dependencies": {
     "@fullcalendar/core": "^6.0.3",
