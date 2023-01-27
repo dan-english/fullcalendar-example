@@ -1,7 +1,7 @@
 <template>
     <div class="row heading">
         <h1>Scheduler Example Using Static Data</h1>
-        <sub><a title="Sample Data Set" target="_blank" href="public-data.json">SAMPLE DATA SET WITH TRANSFORMATION</a></sub>
+        <sub><a title="Sample Data Set" target="_blank" href="/public-data.json">SAMPLE DATA SET WITH TRANSFORMATION</a></sub>
     </div>
         <div>
           <div class="box col-md-5">

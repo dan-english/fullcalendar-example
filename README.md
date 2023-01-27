@@ -29,3 +29,13 @@ flask run
 - flask-cors
 - requests
 - python-dotenv
+
+
+## FullCalendar Library
+```
+https://fullcalendar.io/
+```
+
+The VueJS front end can be started by running `npm run dev` this will initialise its own server and port.
+
+The Python logic can be started bu running `flask run` this will also initalise its own server and port.

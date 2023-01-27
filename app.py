@@ -6,8 +6,9 @@ import requests
 import time
 import os
 
+from pprint import pprint
 
-app = Flask(__name__, static_folder = "./dist/assets",  template_folder = "./dist")
+app = Flask(__name__, template_folder="./templates")
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
@@ -22,7 +23,6 @@ base_url = 'https://api.nylas.com'
 ## add your Nylas access token - be sure to have the correct scopes/permissions on this token
 user_token = os.environ.get('ACCESS_TOKEN')
 
-
 @app.route("/")
 def main():
     return render_template("index.html")
@@ -30,6 +30,10 @@ def main():
 
 @app.route("/availability")
 def get_avail():
+
+    if not user_token:
+        return ["No Access Token"]
+
     start_time  = int(time.time())
     end_time = start_time+(86400 * 30)
 
@@ -44,6 +48,7 @@ def get_avail():
         'open_hours': []
     }
 
+    pprint(payload)
     url = base_url + "/calendars/availability"
 
     headers = {

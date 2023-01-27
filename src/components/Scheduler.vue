@@ -1,7 +1,7 @@
 <template>
     <div class="row heading">
         <h1>Scheduler Example Using Live Data</h1>
-        <sub><a title="Response Data Set" target="_blank" href="http://127.0.0.1:5000/availability">Live Request</a></sub>
+        <sub><a title="Response Data Set" target="_blank" href="http://127.0.0.1:5000/availability">Live Request From Flask Server</a></sub><br>
     </div>
     <div>
           <div class="box col-md-5">
