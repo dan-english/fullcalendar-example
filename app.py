@@ -8,7 +8,7 @@ import os
 
 from pprint import pprint
 
-app = Flask(__name__, template_folder="./templates")
+app = Flask(__name__, template_folder="./dist", static_folder="./dist/assets")
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
