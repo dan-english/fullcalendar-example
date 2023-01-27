@@ -1,7 +1,10 @@
 <template>
     <div class="row heading">
         <h1>Scheduler Example Using Static Data</h1>
-        <sub><a title="Sample Data Set" target="_blank" href="/public-data.json">SAMPLE DATA SET WITH TRANSFORMATION</a></sub>
+        <div><a title="Sample Data Set" target="_blank" href="/public-data.json">Static availability data</a></div>
+        <div>
+            Using <a target="_blank"  href="https://fullcalendar.io/">FullCalendar.IO library</a>
+        </div>
     </div>
         <div>
           <div class="box col-md-5">
