@@ -19,18 +19,22 @@ npm run dev
 npm run build
 ```
 
-### Start Flask Server
-```shell script
-. venv/bin/activate
-pip install -r requirements.txt
-flask run
-```
 
 ## Python Packages
 - flask (https://flask.palletsprojects.com/en/2.2.x/)
 - flask-cors
 - requests
 - python-dotenv
+```shell script
+. venv/bin/activate
+pip install -r requirements.txt
+```
+
+### Start Flask Server
+```shell script
+. venv/bin/activate
+flask run
+```
 
 
 ## FullCalendar Library
@@ -43,5 +47,6 @@ The VueJS front end can be started by running `npm run dev` this will initialise
 The Python logic can be started bu running `flask run` this will also initalise its own server and port.
 
 ### Note:
-If changes are not picked up then stop/start the Flask server as it does not pick up the new compiled assets.
-Also, if using the Flask server then you will need to run `npm run build` as the Flask config is pointing at production assets.
+Alternatively, the Flask app can render the Vue components when running `flask run` - you will need to compile vue for production using `npm run build`
+
+If (local) changes are not picked up then stop/start the Flask server as it does not pick up the new compiled assets.
