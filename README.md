@@ -21,6 +21,8 @@ npm run build
 
 ### Start Flask Server
 ```shell script
+. venv/bin/activate
+pip install -r requirements.txt
 flask run
 ```
 
