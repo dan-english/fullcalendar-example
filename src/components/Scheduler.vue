@@ -5,6 +5,9 @@
         <div>
             Using <a target="_blank" href="https://fullcalendar.io/">FullCalendar.IO library</a> and <a target="_blank" href="https://developer.nylas.com/docs/api/#post/calendars/availability">Nylas Calendar data</a>
         </div>
+        <div>
+            <a target="_blank"  href="https://github.com/dan-english/fullcalendar-example">Github Repo</a>
+        </div>
     </div>
     <div>
           <div class="box col-md-5">
