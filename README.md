@@ -40,6 +40,3 @@ The VueJS front end can be started by running `npm run dev` this will initialise
 
 The Python logic can be started bu running `flask run` this will also initalise its own server and port.
 
-
-##### Example site running static version
-https://calendar-demo.herokuapp.com/
