@@ -183,7 +183,7 @@ import axios from 'axios';
 
             getAvailability() {
                 let app = this;
-                axios.get('http://127.0.0.1:5000/availability').then((response)=>{
+                axios.get('/availability').then((response)=>{
                     app.availableDays = response.data.days;
                     app.timeslot_data = response.data.time_slots;
                     console.groupCollapsed("Get Data From Nylas");
