@@ -1,6 +1,6 @@
 <template>
     <div class="row heading">
-        <h1>Scheduler Example Using Live Data</h1>
+        <h1>Scheduler Example Using Real Time Availability Data From Nylas</h1>
         <div><a title="Response Data Set" target="_blank" href="/availability">Live Request via Flask Server</a></div>
         <div>
             Using <a target="_blank" href="https://fullcalendar.io/">FullCalendar.IO library</a> and <a target="_blank" href="https://developer.nylas.com/docs/api/#post/calendars/availability">Nylas Calendar data</a>
