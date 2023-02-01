@@ -68,6 +68,7 @@ import axios from 'axios';
             FullCalendar // make the <FullCalendar> tag available
         },
         mounted() {
+            this.calendarOptions.initialDate=moment().format("YYYY-MM-DD");
             this.getAvailability();
         },
         data() {
@@ -90,7 +91,7 @@ import axios from 'axios';
                         minute: '2-digit',
                         hour12: false
                     },
-                    initialDate:'2023-01-1',
+                    // initialDate:'2023-01-1',
                     validRange: {
                         start: '2023-01-01',
                         end: '2023-12-31',
