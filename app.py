@@ -89,7 +89,7 @@ def confirmation_process():
     calendar_event_response = create_calendar_event(data)
 
     print(data['config']['send_message_confirmation'])
-    if data['config']['send_message_confirmation'] == 'True':
+    if data['config']['send_message_confirmation'] == True:
         send_message_response = send_message(data)
     else:
         send_message_response={'skip_confirmation_send':True}

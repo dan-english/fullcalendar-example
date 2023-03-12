@@ -50,14 +50,14 @@
                         <el-checkbox v-model="config.send_message_confirmation" label="Send Email Confirmation" size="large" />
                     </div>
 
-                    <div class="box col-md-2">
+                    <div class="box col-md-2" style="display:none">
                         <el-radio-group v-model="config.calendar" class="ml-4">
                           <el-radio label="primary" size="large">Primary Calendar (Alex Li)</el-radio>
                           <el-radio label="alt" size="large">Alt Calendar (Alex Li)</el-radio>
                         </el-radio-group>
                     </div>
 
-                    <div class="box col-md-2">
+                    <div class="box col-md-2" style="display:none">
                          <el-input
                             v-model="config.description"
                             :rows="2"
