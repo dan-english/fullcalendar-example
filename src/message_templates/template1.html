@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>Your Meeting Confirmation</title>
+</head>
+<body>
+
+<h1 style="color:green">Meeting Confirmation - Template One</h1>
+
+Hi {{message_data.participant_name}},<br>
+This is to confirm your meeting with {{ message_data.host_name }} on {{ message_data.selected_date }}  at {{ message_data.selected_time }}<br><br>
+
+To cancel or reschedule, click <span style="text-decoration: underline;color:blue">here</span>
+
+{% block content %}{% endblock %}
+</body>
+</html>

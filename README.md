@@ -49,4 +49,4 @@ The Python logic can be started bu running `flask run` this will also initalise 
 ### Note:
 Alternatively, the Flask app can render the Vue components when running `flask run` - you will need to compile vue for production using `npm run build`
 
-If (local) changes are not picked up then stop/start the Flask server as it does not pick up the new compiled assets.
+If build changes are not picked up then stop/start the Flask server as it does not pick up the new compiled assets.

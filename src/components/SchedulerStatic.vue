@@ -32,16 +32,16 @@
           </div>
           <div class="col-md-3">
              <div v-if="selected_time"  class="box" >
-                <h4>{{formatSelectedDate()}}</h4>
-                {{selected_time}}With an important person<br>Europe/London
-                    <div style="padding:5px;">
-                        <el-input placeholder="Your Name" v-model="name"></el-input>
-                    </div>
-                    <div style="padding:5px;">
-                        <el-input placeholder="Email" v-model="email"></el-input>
-                    </div>
+                            <h4>{{formatSelectedDate()}}</h4>
+                            {{selected_time}}With an important person<br>Europe/London
+                            <div style="padding:5px;">
+                                <el-input placeholder="Your Name" v-model="name"></el-input>
+                            </div>
+                            <div style="padding:5px;">
+                                <el-input placeholder="Email" v-model="email"></el-input>
+                            </div>
 
-                     <el-button type="primary" plain style="width:200px" @click="confirmBooking()">Confirm Booking</el-button>
+                             <el-button type="primary" plain style="width:200px" @click="confirmBooking()">Confirm Booking</el-button>
              </div>
           </div>
         </div>
@@ -55,12 +55,12 @@ import interactionPlugin from '@fullcalendar/interaction'
 import moment from 'moment';
 import StaticData from './data.json';
 
-
     export default {
         components: {
             FullCalendar // make the <FullCalendar> tag available
         },
         mounted() {
+            console.log('This uses a static file to display availability ie: not dynamic');
             this.getAvailability();
         },
         data() {
