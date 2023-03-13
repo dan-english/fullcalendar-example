@@ -310,7 +310,7 @@ import {Helper} from '../mixins/Helper'
                     ElNotification({
                         title: "Success",
                         type: "success",
-                        message: 'Time Slots Updated',
+                        message: 'Config Updated',
                         duration: 1500,
                         position: 'top-right',
                         showClose: false,
