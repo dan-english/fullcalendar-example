@@ -2,6 +2,11 @@ import { createApp } from 'vue'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+
+
+
+
 import App from './App.vue'
 import './assets/main.css'
 
@@ -19,6 +24,10 @@ app.component('SchedulerAdmin', SchedulerAdmin)
 app.component('Scheduler', Scheduler)
 app.component('SchedulerStatic', SchedulerStatic)
 app.component('SchedulerResponse', SchedulerResponse)
+
+for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+  app.component(key, component)
+}
 
 app.provide('global_host_timezone', import.meta.env.VITE_HOST_TIME_ZONE)
 app.provide('global_host_name', import.meta.env.VITE_HOST_NAME)

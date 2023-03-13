@@ -1,7 +1,6 @@
 <template>
     <div class="row heading">
-        <h1>Scheduler Example Using Real Time Availability Data From Nylas</h1>
-        <div><a title="Response Data Set" target="_blank" href="/availability">Request via Flask Server</a></div>
+        <h1>Scheduler Example Using Nylas Calendar APIs</h1>
         <div>
             Using <a target="_blank" href="https://fullcalendar.io/">FullCalendar.IO library</a> and <a target="_blank" href="https://developer.nylas.com/docs/api/#post/calendars/availability">Nylas Calendar data</a>
         </div>
@@ -9,6 +8,7 @@
             <a id="github_repo_link" target="_blank"  href="https://github.com/dan-english/fullcalendar-example">Github Repo</a>
         </div>
     </div>
+
 
     <SchedulerAdmin
         :default_config="admin_config"
@@ -77,6 +77,7 @@ import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 import moment from 'moment-timezone';
 import axios from 'axios';
+import { ElNotification } from 'element-plus'
 
 import {Helper} from '../mixins/Helper'
 
@@ -110,9 +111,6 @@ import {Helper} from '../mixins/Helper'
             this.participant_name = this.global_participant_name;
             this.participant_email = this.global_participant_email;
 
-
-
-
             this.refreshData();
         },
         data() {
@@ -128,6 +126,7 @@ import {Helper} from '../mixins/Helper'
                     duration:48,
                     template:'template1.html',
                     send_message_confirmation:true,
+                    notify_participants:true,
                     description:'',
                     calendar: 'primary'
                 },
@@ -270,6 +269,9 @@ import {Helper} from '../mixins/Helper'
                     console.log(response.data);
                     console.groupEnd();
                 }).then(()=>{
+
+                        open2();
+
                     app.highlightDays();
                 })
 
@@ -288,6 +290,7 @@ import {Helper} from '../mixins/Helper'
                 app.selected_date=null;
                 app.timeslot_data=null;
                 app.availableDays=[]
+                app.highlightDays();
 
                 //shift the focus to remove the hover state on the button
                 document.getElementById("github_repo_link").focus();
@@ -301,9 +304,17 @@ import {Helper} from '../mixins/Helper'
                     //timeslot_data will be used to display possible time-slots for a meeting.
                     app.timeslot_data = response.data.time_slots;
                 }).then(()=>{
-                    console.log('reset calendar and time-slots')
                     console.log(app.timeslot_data)
                     app.highlightDays();
+
+                    ElNotification({
+                        title: "Success",
+                        type: "success",
+                        message: 'Time Slots Updated',
+                        duration: 1500,
+                        position: 'top-right',
+                        showClose: false,
+                    });
 
                 })
             },
@@ -335,6 +346,14 @@ import {Helper} from '../mixins/Helper'
                     console.log(response.data);
                     console.groupEnd();
                     app.confirmation_data = response.data
+                    ElNotification({
+                        title: "Success",
+                        type: "success",
+                        message: 'Event Created',
+                        duration: 1500,
+                        position: 'top-right',
+                        showClose: false,
+                    });
                 })
 
             },

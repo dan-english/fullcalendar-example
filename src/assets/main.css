@@ -71,3 +71,10 @@
     color: #e83e8c;
     font-size:14px;
 }
+
+
+.el-drawer__title{
+    font-weight:bold;
+    font-size:17px;
+    color:green;
+}

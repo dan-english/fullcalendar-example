@@ -144,6 +144,10 @@ def create_calendar_event(data):
     event_description = render_template_string(event_template, message_data=data)
 
     url = base_url + "/events"
+
+    if data['config']['notify_participants'] == False:
+        url+='?notify_participants=false'
+
     headers = {
         'Content-Type': 'application/json',
         'Authorization': 'Basic '+ base64_user_access_token,
@@ -167,12 +171,8 @@ def create_calendar_event(data):
         },
         "location": "West Reservoir Centre, London N4 2HA",
         "conferencing": {
-            "provider":"Google Meet",
-            "details": {
-                "url":"https://meet.google.com/bee-befz-uih",
-                "pin":"115 911 603#",
-                "phone":["+44 20 3956 5321"]
-            }
+            "provider": "Google Meet",
+            "autocreate": {}
         },
         "reminder_minutes":"[15]",
         "reminder_method":"popup"
