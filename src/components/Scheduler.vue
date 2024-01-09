@@ -156,8 +156,8 @@ import {Helper} from '../mixins/Helper'
                     },
                     // initialDate:'2023-01-1',
                     validRange: {
-                        start: '2023-01-01',
-                        end: '2023-12-31',
+                        start: '2024-01-01',
+                        end: '2024-12-31',
                     },
                     showNonCurrentDates: false,
                     dateClick: this.handleDateSelect,

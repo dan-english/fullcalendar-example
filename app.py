@@ -213,9 +213,12 @@ def get_availability_data():
         'Authorization': 'Basic '+ base64_user_access_token
     }
 
-    response = requests.request("POST", url, headers=headers, data=json.dumps(new_payload))
-    json_response = json.loads(response.text)
-
+    json_repsonse = {}
+    try:
+        response = requests.request("POST", url, headers=headers, data=json.dumps(new_payload))
+        json_response = json.loads(response.text)
+    except Exception as e:
+        print(str(e))
 
     new_data = []
     days = []
